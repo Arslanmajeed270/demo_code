@@ -1,0 +1,58 @@
+{
+   "parent": "base",
+   "jsonSchema": {
+      "title": "Properties",
+      "type": "object",
+      "required": [
+         "src",
+         "mediaStartAt"
+      ],
+      "properties": {
+         "src": {
+            "type": "string",
+            "title": "Source",
+            "format": "uri",
+            "maxLength": 1000
+         },
+         "mediaStartAt": {
+            "type": "number",
+            "title": "Audio Start at (secs)",
+            "multipleOfPrecision": 0.01
+         },
+         "muteMedia": {
+            "type": "boolean",
+            "title": "Mute",
+            "default": false
+         },
+         "mediaVolume": {
+            "type": "number",
+            "title": "Volume",
+            "minimum": 0,
+            "maximum": 1,
+            "multipleOfPrecision": 0.01,
+            "default": 1
+         },
+         "crossOrigin": {
+            "type": "string",
+            "title": "Source",
+            "enum": ["anonymous", "use-credentials", null],
+            "default": "anonymous",
+            "const": "anonymous"
+         }
+      }
+   },
+   "uiSchema": {
+      "src": {
+         "ui:widget": "uri"
+      },
+      "crossOrigin": {
+         "ui:widget": "hidden",
+         "ui:options": {
+            "inline": true
+         }
+      },
+      "mediaVolume": {
+         "ui:widget": "range"
+      }
+   }
+}

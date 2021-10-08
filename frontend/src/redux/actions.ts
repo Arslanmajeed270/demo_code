@@ -1,0 +1,6 @@
+export * from '@redux/slices/app'
+export * from '@redux/slices/user'
+export * from '@redux/slices/magic/sidePanel'
+export * from '@redux/slices/magic/timeline'
+export * from '@redux/slices/magic/template'
+export * from '@redux/slices/magic/iframe'

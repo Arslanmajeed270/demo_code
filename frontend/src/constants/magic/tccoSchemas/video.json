@@ -1,0 +1,35 @@
+{
+   "parent": "image",
+   "jsonSchema": {
+      "title": "Properties",
+      "type": "object",
+      "required": [
+         "mediaStartAt"
+      ],
+      "properties": {
+         "mediaStartAt": {
+            "type": "number",
+            "title": "Video Start at (secs)",
+            "multipleOfPrecision": 0.01
+         },
+         "muteMedia": {
+            "type": "boolean",
+            "title": "Mute",
+            "default": false
+         },
+         "mediaVolume": {
+            "type": "number",
+            "title": "Volume",
+            "minimum": 0,
+            "maximum": 1,
+            "multipleOfPrecision": 0.01,
+            "default": 1
+         }
+      }
+   },
+   "uiSchema": {
+      "mediaVolume": {
+         "ui:widget": "range"
+      }
+   }
+}

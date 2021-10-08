@@ -1,0 +1,322 @@
+
+{
+   "parent": "base",
+   "jsonSchema": {
+      "title": "Properties",
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "maxProperties": 100,
+      "required": [
+         "originX",
+         "originY",
+         "left",
+         "top",
+         "scaleX",
+         "scaleY",
+         "opacity",
+         "angle",
+         "visible",
+         "width",
+         "height"
+      ],
+      "properties": {
+         "visible": {
+            "type": "boolean",
+            "title": "Visible",
+            "default": true
+         },
+         "opacity": {
+            "type": "number",
+            "title": "Opacity",
+            "minimum": 0,
+            "maximum": 1,
+            "multipleOfPrecision": 0.01,
+            "default": 1
+         },
+         "left": {
+            "type": "number",
+            "title": "Left",
+            "default": 0
+         },
+         "top": {
+            "type": "number",
+            "title": "Top",
+            "default": 0
+         },
+         "width": {
+            "type": "number",
+            "title": "Width"
+         },
+         "height": {
+            "type": "number",
+            "title": "Height"
+         },
+         "fill": {
+            "type": "string",
+            "title": "Fill",
+            "maxLength": 30
+         },
+         "originX": {
+            "type": "string",
+            "title": "Origin X",
+            "enum": ["left", "center", "right"],
+            "default": "center"
+         },
+         "originY": {
+            "type": "string",
+            "title": "Origin Y",
+            "enum": ["top", "center", "bottom"],
+            "default": "center"
+         },
+         "scaleX": {
+            "type": "number",
+            "title": "Scale X",
+            "minimum": 0,
+            "maximum": 10,
+            "multipleOfPrecision": 0.01,
+            "default": 1
+         },
+         "scaleY": {
+            "type": "number",
+            "title": "Scale Y",
+            "minimum": 0,
+            "maximum": 10,
+            "multipleOfPrecision": 0.01,
+            "default": 1
+         },
+         "angle": {
+            "type": "number",
+            "title": "Angle",
+            "minimum": -360,
+            "multipleOfPrecision": 0.01,
+            "maximum": 360,
+            "default": 0
+         },
+         "flipX": {
+            "type": "boolean",
+            "title": "FlipX"
+         },
+         "flipY": {
+            "type": "boolean",
+            "title": "FlipY"
+         },
+         "shadow": {
+            "type": "object",
+            "title": "Shadow",
+            "additionalProperties": false,
+            "properties": {
+               "color": {
+                  "type": "string",
+                  "title": "Shadow Color",
+                  "maxLength": 30
+               },
+               "blur": {
+                  "type": "number",
+                  "title": "Shadow Blur"
+               },
+               "affectStroke": {
+                  "type": "boolean",
+                  "title": "Shadow Affect Stroke"
+               },
+               "nonScaling": {
+                  "type": "boolean",
+                  "title": "Shadow Non Scaling"
+               },
+               "offsetX": {
+                  "type": "number",
+                  "title": "Shadow Offset X"
+               },
+               "offsetY": {
+                  "type": "number",
+                  "title": "Shadow Offset Y"
+               }
+            }
+         },
+         "backgroundColor": {
+            "type": "string",
+            "title": "Background Color",
+            "maxLength": 30
+         },
+         "paintFirst": {
+            "type": "string",
+            "title": "Paint First",
+            "enum": ["fill", "stroke"]
+         },
+         "globalCompositeOperation": {
+            "type": "string",
+            "title": "Global Composite Operation",
+            "enum": [
+               "source-over",
+               "source-in",
+               "source-out",
+               "source-atop",
+               "destination-over",
+               "destination-in",
+               "destination-out",
+               "destination-atop",
+               "lighter",
+               "copy",
+               "xor",
+               "multiply",
+               "screen",
+               "overlay",
+               "darken",
+               "color-dodge",
+               "color-burn",
+               "hard-light",
+               "soft-light",
+               "difference",
+               "exclusion",
+               "hue",
+               "saturation",
+               "color",
+               "luminosity"
+            ]
+         },
+         "fillRule": {
+            "type": "string",
+            "title": "Fill rule",
+            "enum": ["nonzero", "evenodd"]
+         },
+         "skewX": {
+            "type": "number",
+            "title": "Skew X",
+            "minimum": -90,
+            "maximum": 90
+         },
+         "skewY": {
+            "type": "number",
+            "title": "Skew Y",
+            "minimum": -90,
+            "maximum": 90
+         },  
+         "stroke": {
+            "type": "string",
+            "title": "Stroke Color",
+            "maxLength": 30
+         },
+         "strokeWidth": {
+            "type": "number",
+            "title": "Stroke Width",
+            "minimum": 0,
+            "multipleOfPrecision": 1,
+            "maximum": 100
+         },
+         "strokeDashArray": {
+            "type": "array",
+            "title": "Stroke Dash Array",
+            "items": {
+               "type": "number",
+               "minimum": 0,
+               "multipleOfPrecision": 1,
+               "maximum": 100
+            }
+         },
+         "strokeLineCap": {
+            "type": "string",
+            "title": "Stroke Line Cap",
+            "enum": ["butt", "round", "square"]
+         },
+         "strokeDashOffset": {
+            "type": "number",
+            "title": "Stroke Dash Offset",
+            "minimum": 0,
+            "multipleOfPrecision": 1,
+            "maximum": 100
+         },
+         "strokeLineJoin": {
+            "type": "string",
+            "title": "Stroke Line Join",
+            "enum": ["miter", "round", "bevil"]
+         },
+         "strokeUniform": {
+            "type": "boolean",
+            "title": "Stroke UniForm"
+         },
+         "strokeMiterLimit": {
+            "type": "number",
+            "title": "Stroke Miter Limit",
+            "minimum": 0,
+            "maximum": 100,
+            "multipleOfPrecision": 0.01
+         }
+      }
+   },
+   "uiSchema": {
+      "originX": {
+         "ui:widget": "radio",
+         "ui:options": {
+            "inline": true
+         }
+      },
+      "originY": {
+         "ui:widget": "radio",
+         "ui:options": {
+            "inline": true
+         }
+      },
+      "strokeLineJoin": {
+         "ui:widget": "radio",
+         "ui:options": {
+            "inline": true
+         }
+      },
+      "paintFirst": {
+         "ui:widget": "radio",
+         "ui:options": {
+            "inline": true
+         }
+      },
+      "strokeLineCap": {
+         "ui:widget": "radio",
+         "ui:options": {
+            "inline": true
+         }
+      },
+      "fill": {
+         "ui:widget": "color"
+      },
+      "stroke": {
+         "ui:widget": "color"
+      },
+      "backgroundColor": {
+         "ui:widget": "color"
+      },
+      "strokeDashOffset": {
+         "ui:widget": "range"
+      },
+      "angle": {
+         "ui:widget": "range"
+      },
+      "scaleX": {
+         "ui:widget": "range"
+      },
+      "scaleY": {
+         "ui:widget": "range"
+      },
+      "skewX": {
+         "ui:widget": "range"
+      },
+      "skewY": {
+         "ui:widget": "range"
+      },
+      "strokeMiterLimit": {
+         "ui:widget": "range"
+      },
+      "opacity": {
+         "ui:widget": "range"
+      },
+      "strokeDashArray": {
+         "ui:widget": "range"
+      },
+      "strokeWidth": {
+         "ui:widget": "range"
+      },
+      "shadow": {
+         "color": {
+            "ui:widget": "color"
+         }
+      }
+   }
+}

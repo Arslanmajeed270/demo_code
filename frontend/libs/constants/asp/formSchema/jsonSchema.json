@@ -1,0 +1,99 @@
+{
+  "type": "object",
+  "title":"Variables",
+  "required": [
+    "id",
+    "name",
+    "type",
+    "isRequired"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Id",
+      "description": "Please enter Variable id",
+      "pattern": "^[a-zA-Z0-9_]*$"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "description": "Please enter variable name"
+    },
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "default": "string",
+      "enum": [
+        "string",
+        "number",
+        "boolean"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "isRequired": {
+      "type": "string",
+      "title": "Required",
+      "default": "false",
+      "enum": [
+        "true",
+        "false"
+      ]
+    }
+  },
+  "dependencies": {
+    "type": {
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "enum": [
+                "string"
+              ]
+            },
+            "defaultValue": {
+              "type": "string",
+              "title": "Default Value",
+              "description": "Please enter variable default value"
+            }
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "enum": [
+                "number"
+              ]
+            },
+            "defaultValue": {
+              "type": "number",
+              "title": "Default Value",
+              "description": "Please enter variable default value",
+              "minimum": 0
+            }
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "enum": [
+                "boolean"
+              ]
+            },
+            "defaultValue": {
+              "type": "string",
+              "title": "Default Value",
+              "description": "Please enter variable default value",
+              "enum": [
+                "true",
+                "false"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

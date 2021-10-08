@@ -1,0 +1,27 @@
+{
+   "parent": null,
+   "jsonSchema": {
+        "title": "Keyframes",
+        "type": "array",
+        "required": [
+            "property",
+            "time"
+        ],
+        "items": {
+            "type": "object",
+            "properties": {
+                "propertyPath": {
+                    "type": "string",
+                    "title": "Property Path",
+                    "enum": []
+                },
+                "time": {
+                    "type": "number",
+                    "title": "Keyframe time (secs)",
+                    "multipleOfPrecision": 0.01
+                }
+            }
+        }
+   },
+   "uiSchema": {}
+}

@@ -1,0 +1,15 @@
+{
+    "video-name": "VIDEO NAME",
+    "template-name":"TEMPLATE NAME",
+    "created-at": "CREATED AT",
+    "status": "STATUS",
+    "actions": "ACTIONS",
+    "video-greeting": "We are excited to have on-board",
+    "new-video-message":"Create your first video",
+    "create-video": "Create Video",
+    "video-title": "Video Title",
+    "video-slug" : "Video Slug",
+    "purpose": "Purpose",
+    "public": "Public",
+    "template-variables": "Template Variables"
+}

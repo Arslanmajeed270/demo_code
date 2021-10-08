@@ -1,0 +1,12 @@
+{
+    "new-template": "Neue Vorlage",
+    "search" : "Suche",
+    "templates": "Vorlagen",
+    "select-template": "Vorlage auswählen",
+    "create-template": "Vorlage erstellen",
+    "select-language": "Sprache auswählen",
+    "create-video": "Video erstellen",
+    "edit": "Bearbeiten",
+    "clone": "Klon",
+    "code-api": "Code-API"
+}

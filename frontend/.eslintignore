@@ -1,0 +1,7 @@
+node_modules
+public
+cypress
+.next
+__generated__
+storybook-static
+dist

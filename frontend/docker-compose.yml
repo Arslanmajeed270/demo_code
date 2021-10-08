@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+  emz-frontend:
+    build:
+      context: .
+      #ADD_IN_CI dockerfile: ./Dockerfile.ci
+    ports: #REMOVE_IN_CI
+      - '${EMZ_FRONTEND_APP_PORT}:${EMZ_FRONTEND_APP_PORT}' #REMOVE_IN_CI
+    command: dev
+    volumes:
+      - ${PWD}/frontend:/home/frontend
+    environment:
+      - EMZ_BACKEND_APP_PORT
+      - EMZ_FRONTEND_APP_PORT
+      - NEXT_PUBLIC_EMZ_FRONTEND_URL=${EMZ_FRONTEND_APP_URI}
+      - NEXT_PUBLIC_EMZ_BACKEND_APP_URI=${EMZ_BACKEND_APP_URI}
+      - NEXT_PUBLIC_ASP_FRONTEND_URL=${ASP_FRONTEND_APP_URI}
+      - NEXT_PUBLIC_ASP_BACKEND_APP_URI=${ASP_BACKEND_APP_URI}
+      - NEXT_PUBLIC_OIDC_CLIENT_ID=${OIDC_CLIENT_ID}
+      - IS_CI
+      - CYPRESS_RECORD_KEY
+      - CYPRESS_BUILD_ID=${BUILD_TAG}
+      - CYPRESS_DIRECTOR_TOKEN
+    healthcheck:
+      test:
+        ['CMD', 'curl', '-f', 'http://emz-frontend:${EMZ_FRONTEND_APP_PORT}']
+      interval: 1s
+      timeout: 5s
+      retries: 60
+    networks:
+      app-network:
+
+networks:
+  app-network:
+    name: ${APP_NETWORK_NAME}

@@ -1,0 +1,65 @@
+
+{
+   "parent": null,
+   "jsonSchema": {
+      "title": "Properties",
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "maxProperties": 100,
+      "required": [
+         "_id",
+         "type",
+         "version",
+         "startAt",
+         "endAt"
+      ],
+      "properties": {
+         "name": {
+            "type": "string",
+            "title": "Name",
+            "maxLength": 30
+         },
+         "startAt": {
+            "type": "number",
+            "title": "Start at (seconds)",
+            "multipleOfPrecision": 0.01
+         },
+         "endAt": {
+            "type": "number",
+            "title": "End at (seconds)",
+            "multipleOfPrecision": 0.01
+         },
+         "_id": {
+            "type": "string",
+            "title": "Id",
+            "maxLength": 50
+         },
+         "type": {
+            "type": "string",
+            "title": "Object Type",
+            "default": "base",
+            "const": "base",
+            "maxLength": 30
+         },
+         "version": {
+            "type": "string",
+            "title": "Version",
+            "default": "4.5.1",
+            "const": "4.5.1",
+            "maxLength": 30
+         }
+      }
+   },
+   "uiSchema": {
+      "_id": {
+         "ui:readonly": true
+      },
+      "type": {
+         "ui:readonly": true
+      },
+      "version": {
+         "ui:readonly": true
+      }
+   }
+}

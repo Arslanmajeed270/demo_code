@@ -1,0 +1,15 @@
+{
+    "video-name": "Videoname",
+    "template-name":"Vorlagenname",
+    "created-at": "Erstellen bei",
+    "status": "Status",
+    "actions": "Aktionen",
+    "video-greeting": "Wir freuen uns, an Bord zu sein",
+    "new-video-message":"Erstelle dein Faustvideo",
+    "create-video": "Video erstellen",
+    "video-title": "Videotitel",
+    "video-slug" : "Video-Schnecke",
+    "purpose": "Zweck",
+    "public": "Öffentlich",
+    "template-variables": "Vorlagenvariablen"
+}

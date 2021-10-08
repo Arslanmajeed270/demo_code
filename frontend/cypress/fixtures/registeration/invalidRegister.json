@@ -1,0 +1,8 @@
+{
+    "firstName":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "lastName":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "email":"user@gmailcom",
+    "wrongEmail":"wrongUser@gmail.com",
+    "minLengthpassword":"12345",
+    "wrongPassword":"5432166"
+}

@@ -1,0 +1,103 @@
+{
+   "parent": "object",
+   "jsonSchema": {
+      "title": "Properties",
+      "type": "object",
+      "required":[
+         "src"
+      ],
+      "properties": {
+         "src": {
+            "type": "string",
+            "title": "Source",
+            "format": "uri",
+            "maxLength": 1000
+         },
+         "cropX": {
+            "type": "number",
+            "title": "Crop X",
+            "minimum": 0
+         },
+         "cropY": {
+            "type": "number",
+            "title": "Crop Y",
+            "minimum": 0
+         },
+         "crossOrigin": {
+            "type": "string",
+            "title": "Source",
+            "enum": ["anonymous", "use-credentials", null],
+            "default": "anonymous",
+            "const": "anonymous"
+         },
+         "filters": {
+            "type": "array",
+            "title": "Filters",
+            "required":[
+               "type"
+            ],
+            "items": {
+               "type": "object",
+               "dependencies": {
+                  "type": {
+                     "oneOf": [
+                        {
+                           "additionalProperties": false,
+                           "properties": {
+                              "type": {
+                                 "enum": [
+                                    "Grayscale"
+                                 ]
+                              },
+                              "mode": {
+                                 "type": "string",
+                                 "title": "Grayscale mode",
+                                 "enum": [
+                                    "average",
+                                    "lightness",
+                                    "luminosity"
+                                 ]
+                              }
+                           }
+                        },
+                        {
+                           "additionalProperties": false,
+                           "properties": {
+                              "type": {
+                                 "enum": [
+                                    "Invert"
+                                 ]
+                              },
+                              "invert": {
+                                 "type": "boolean",
+                                 "title": "Turn on invert",
+                                 "default": true
+                              }
+                           }
+                        }
+                     ]
+                  }
+               },
+               "properties": {
+                  "type": {
+                     "type": "string",
+                     "title": "Filter Type",
+                     "enum": ["Grayscale", "Invert"]
+                  }
+               }
+            }
+         }
+      }
+   },
+   "uiSchema": {
+      "src": {
+         "ui:widget": "uri"
+      },
+      "crossOrigin": {
+         "ui:widget": "hidden",
+         "ui:options": {
+            "inline": true
+         }
+      }
+   }
+}

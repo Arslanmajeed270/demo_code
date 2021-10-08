@@ -1,0 +1,112 @@
+{
+   "parent": "object",
+   "jsonSchema": {
+      "title": "Properties",
+      "type": "object",
+      "required": [
+         "text",
+         "fontSize"
+      ],
+      "properties": {
+         "text": {
+            "type": "string",
+            "title": "Text",
+            "maxLength": 10000
+         },
+         "textAlign": {
+            "type": "string",
+            "title": "Text Align",
+            "default": "left",
+            "enum": ["left", "center", "right", "justify", "justify-left", "justify-center", "justify-right"]
+         },
+         "textBackgroundColor": {
+            "type": "string",
+            "title": "Text Background Color",
+            "maxLength": 30
+         },
+         "underline": {
+            "type": "boolean",
+            "title": "Underline",
+            "default": false
+         },
+         "fontSize": {
+            "type": "number",
+            "title": "Font Size",
+            "minimum": 1,
+            "maximum": 100,
+            "multipleOfPrecision": 1,
+            "default": 18
+         },
+         "fontStyle": {
+            "type": "string",
+            "title": "Font Style",
+            "default": "normal",
+            "enum": ["normal", "italic", "oblique"]
+         },
+         "fontWeight": {
+            "type": "string",
+            "title": "Font Weight",
+            "default": "normal",
+            "enum": ["bold", "normal", "100", "200", "300", "400", "500", "600", "700", "800", "900"]
+         },
+         "overline": {
+            "type": "boolean",
+            "title": "Overline",
+            "default": false
+         },
+         "linethrough": {
+            "type": "boolean",
+            "title": "Line Through",
+            "default": false
+         },
+         "direction": {
+            "type": "string",
+            "title": "Direction",
+            "enum": ["ltr", "rtl"]
+         },
+         "lineHeight": {
+            "type": "number",
+            "title": "Line Height",
+            "minimum": 0.1,
+            "maximum": 10,
+            "multipleOfPrecision": 0.1,
+            "default": 1
+         },
+         "charSpacing": {
+            "type": "number",
+            "title": "Char Spacing",
+            "minimum": -500,
+            "maximum": 5000,
+            "multipleOfPrecision": 1
+         },
+         "fontFamily": {
+            "type": "string",
+            "title": "Font Family",
+            "maxLength": 100
+         }
+      }
+   },
+   "uiSchema": {
+      "textBackgroundColor": {
+         "ui:widget": "color"
+      },
+      "direction": {
+         "ui:widget": "radio",
+         "ui:options": {
+            "inline": true
+         }
+      },
+      "lineHeight": {
+         "ui:widget": "range"
+      },
+      "charSpacing": {
+         "ui:widget": "range"
+      },
+      "text": {
+         "ui:widget": "textarea"
+      },
+      "fontFamily": {
+         "ui:readonly": true
+      }
+   }
+}

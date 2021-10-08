@@ -1,0 +1,16 @@
+# npm
+node_modules
+# next.js build files
+.next
+# environment variables
+.env
+.env.*
+!.env.example
+
+# cypress screenshots and videos
+cypress/screenshots/
+cypress/videos/
+.cache
+
+yarn-error.log
+dist

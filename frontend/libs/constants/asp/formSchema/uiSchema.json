@@ -1,0 +1,17 @@
+{
+  "isRequired":{
+    "ui:widget": "select"
+  },
+  "description": {
+    "ui:widget": "textarea"
+  },
+  "ui:order": [
+    "name",
+    "type",
+    "isRequired",
+    "defaultValue",
+    "description",
+    "metadata",
+    "id"
+  ]
+}
